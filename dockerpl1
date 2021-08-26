@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+   stages {
+ stage('Run Docker container on remote Docker hosts') {
+             
+            steps {
+                sh "docker -H ssh://jenkin@172.23.61.102 run hello-world"
+ 
+            }
+        }
+    
+    
